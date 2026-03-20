@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nursyafikah, Happy Bornday 🐨</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div id="yt-player" style="position:fixed;left:-9999px;top:-9999px;width:1px;height:1px;"></div>
+
+<div class="music-btn" id="musicBtn" onclick="toggleMusic()">
+  <div class="music-eq paused" id="eq"><span></span><span></span><span></span></div>
+</div>
+
+<nav class="nav-dots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+</nav>
+
+<svg width="0" height="0" style="position:absolute;overflow:hidden">
+  <defs>
+    <g id="daisy"><g transform="translate(20,19)">
+      <ellipse cx="0" cy="-11" rx="3.8" ry="8" fill="#f2eecc"/>
+      <ellipse cx="0" cy="-11" rx="3.8" ry="8" fill="#f2eecc" transform="rotate(60)"/>
+      <ellipse cx="0" cy="-11" rx="3.8" ry="8" fill="#f2eecc" transform="rotate(120)"/>
+      <ellipse cx="0" cy="-11" rx="3.8" ry="8" fill="#f2eecc" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-11" rx="3.8" ry="8" fill="#f2eecc" transform="rotate(240)"/>
+      <ellipse cx="0" cy="-11" rx="3.8" ry="8" fill="#f2eecc" transform="rotate(300)"/>
+      <circle cx="0" cy="0" r="5.5" fill="#f0d030"/>
+    </g><line x1="20" y1="19" x2="20" y2="40" stroke="#6aaa5a" stroke-width="2.2"/></g>
+    <g id="tulip">
+      <line x1="20" y1="22" x2="20" y2="40" stroke="#6aaa5a" stroke-width="2.2"/>
+      <path d="M13 24 Q10 10 20 4 Q30 10 27 24 Q24 29 20 28 Q16 29 13 24Z" fill="#c878a0"/>
+      <path d="M13 24 Q15 16 20 14 Q25 16 27 24" fill="#dea0be"/>
+      <path d="M20 28 Q14 30 12 38" stroke="#6aaa5a" stroke-width="2" fill="none"/>
+      <ellipse cx="10" cy="36" rx="7" ry="4" fill="#6aaa5a" transform="rotate(-20,10,36)"/>
+    </g>
+    <g id="lily">
+      <line x1="20" y1="24" x2="20" y2="40" stroke="#6aaa5a" stroke-width="2.2"/>
+      <ellipse cx="20" cy="13" rx="3.8" ry="10" fill="#f4f0ea"/>
+      <ellipse cx="20" cy="13" rx="3.8" ry="10" fill="#f4f0ea" transform="rotate(60,20,22)"/>
+      <ellipse cx="20" cy="13" rx="3.8" ry="10" fill="#f4f0ea" transform="rotate(120,20,22)"/>
+      <ellipse cx="20" cy="13" rx="3.8" ry="10" fill="#f4f0ea" transform="rotate(180,20,22)"/>
+      <ellipse cx="20" cy="13" rx="3.8" ry="10" fill="#f4f0ea" transform="rotate(240,20,22)"/>
+      <ellipse cx="20" cy="13" rx="3.8" ry="10" fill="#f4f0ea" transform="rotate(300,20,22)"/>
+      <circle cx="20" cy="22" r="4" fill="#f0c030"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- S1: HERO — VIDEO -->
+<section id="s1">
+  <div class="float-wrap" id="floatWrap"></div>
+  <div class="photo-bg">
+    <video id="vid1" autoplay muted loop playsinline
+      style="width:100%;height:100%;object-fit:cover;object-position:center center;filter:grayscale(18%) brightness(.62);position:absolute;inset:0;">
+      <source src="https://res.cloudinary.com/dud0n1yrs/video/upload/v1774020477/video_palo4l.mp4" type="video/mp4">
+    </video>
+    <img id="img1" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(18%) brightness(.62);display:none;">
+  </div>
+  <div class="s1-vignette"></div>
+  <div class="s1-gradient"></div>
+  <div class="s1-text">
+    <div class="s1-name show">Nursyafikah</div>
+    <div class="s1-sub show">Happy Birthday</div>
+  </div>
+  <div class="scroll-line"></div>
+</section>
+
+<!-- S2: POLAROID WALL -->
+<section id="s2">
+  <div class="botanical-bg" id="botBg"></div>
+  <div class="s2-float-wrap" id="s2FloatWrap"></div>
+  <div class="polaroid-wall" id="polaroidWall"></div>
+  <div class="polaroid-hint" id="polaroidHint">i love everything about you</div>
+</section>
+
+<!-- S3: POEM -->
+<section id="s3">
+  <div class="poem-bg-photo">
+    <img src="https://res.cloudinary.com/dud0n1yrs/image/upload/v1774020584/7_cs1h9y.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(60%) brightness(.9);">
+    <div class="poem-bg-photo-overlay"></div>
+  </div>
+  <div class="poem-scene">
+    <div class="poem-eyebrow" id="pe1">Everything About You</div>
+   <span class="poem-line"         id="pl1">Iso do kinoohupan nopo diya</span>
+<span class="poem-line ital"    id="pl2">nga miampai iso do podopodong nopo diya,</span>
+<span class="poem-line"         id="pl3">bo moh diya tumimpu —</span>
+<span class="poem-line ital"    id="pl4">malumo, molimpiou, bo mosilou.</span>
+<span class="poem-line sm"      id="pl5">Onggo tadau nodi tomod nopo diya i sololuon.</span>
+<span class="poem-line sm ital" id="pl6">Diya nopo iti.</span>
+    <div class="poem-divider" id="pd1"></div>
+    <div class="flower-row-svg" id="fr1">
+      <svg width="40" height="44" viewBox="0 0 40 44"><use href="#daisy"/></svg>
+      <svg width="40" height="44" viewBox="0 0 40 44"><use href="#tulip"/></svg>
+      <svg width="40" height="44" viewBox="0 0 40 44"><use href="#lily"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- S4: PROMISE -->
+<section id="s4">
+  <div class="dark-photo-bg">
+    <img src="https://res.cloudinary.com/dud0n1yrs/image/upload/v1774020584/5_eyzbvw.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(.38);">
+  </div>
+  <div class="dark-overlay"></div>
+  <div class="promise-scene">
+    <div class="promise-label" id="prlbl">I hope this year u gonna live to the fullest</div>
+    <span class="promise-line big"      id="pr1">No more mad at Air Asia Please</span>
+    <span class="promise-line big ital" id="pr2">I wish u will get better in everything never tell me  </span>
+    <span class="promise-line ital"     id="pr4">I hope in this life i can do laundry and tax with you</span>
+    <span class="promise-line med"      id="pr5">through every season,</span>
+    <span class="promise-line big ital" id="pr6">You are the best thing ever happened to me</span>
+    <span class="promise-line big"      id="pr7">I hope everything that hurts you in the past returns to you as strength 100x better aamiinn</span>
+    <div class="ring-hint" id="rh">
+      <div class="ring-hint-line"></div>
+      <div class="ring-hint-text">ME + SYAFIKAH + MODOP</div>
+      <div class="ring-hint-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- S5: SPLIT -->
+<section id="s5">
+  <div class="half-photo">
+    <img src="https://res.cloudinary.com/dud0n1yrs/image/upload/f_auto,q_auto/1_yjp9ni" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(10%);">
+  </div>
+  <div class="half-content" id="hc">
+    <div class="half-label">a letter from my nonchalant guy faris</div>
+    <div class="half-poem">
+      <span class="stanza" id="hps1">You grew up learning<br>to be your own shelter —<br><em>I saw that.</em></span>
+      <span class="stanza" id="hps2">You deserve <br>to be happy:<br><em>you will never stand alone again this time</em></span>
+      <span class="stanza" id="hps3">I want be here in every single time<br><em>Modop Modop</em></span>
+    </div>
+    <div class="half-sig" id="hsig">— yours, in every lifetime 🤍</div>
+  </div>
+  <div class="half-flowers">
+    <svg width="32" height="38" viewBox="0 0 40 44"><use href="#daisy"/></svg>
+    <svg width="32" height="38" viewBox="0 0 40 44"><use href="#tulip"/></svg>
+    <svg width="32" height="38" viewBox="0 0 40 44"><use href="#lily"/></svg>
+    <svg width="32" height="38" viewBox="0 0 40 44"><use href="#daisy"/></svg>
+    <svg width="32" height="38" viewBox="0 0 40 44"><use href="#tulip"/></svg>
+  </div>
+</section>
+
+<!-- S6: OUTRO -->
+<section id="s6">
+  <div class="s6-bg">
+    <img src="https://res.cloudinary.com/dud0n1yrs/image/upload/v1774020584/7_cs1h9y.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:grayscale(40%) brightness(.35);">
+  </div>
+  <div class="s6-overlay"></div>
+  <div class="outro-wrap">
+    <div class="outro-small show" id="os1">today, tomorrow, always</div>
+    <div class="outro-big show" id="ob">I love you.</div>
+    <div class="outro-promise show" id="op2">
+      "Thanks i dont know but <br>
+    you are more than enough <br>
+    you deserve all the happiness <br>
+      you always deserved."
+    </div>
+    <div class="outro-flowers show" id="of">
+      <svg width="clamp(32px,5vw,48px)" height="clamp(36px,6vw,54px)" viewBox="0 0 40 44"><use href="#daisy"/></svg>
+      <svg width="clamp(32px,5vw,48px)" height="clamp(36px,6vw,54px)" viewBox="0 0 40 44"><use href="#tulip"/></svg>
+      <svg width="clamp(32px,5vw,48px)" height="clamp(36px,6vw,54px)" viewBox="0 0 40 44"><use href="#lily"/></svg>
+    </div>
+  </div>
+  <div class="made">made with love, for PHD MODOP guy</div>
+</section>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
